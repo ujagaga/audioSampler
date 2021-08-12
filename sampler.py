@@ -10,16 +10,14 @@ app = Flask(__name__, static_url_path='/assets', static_folder='assets')
 
 app.config.update(
     TESTING=False,
-    SECRET_KEY="Qwerty123ReminderServiceSecretKey13",
-    # SERVER_NAME="bills.ohanacode-dev.com",
-    SESSION_COOKIE_DOMAIN="bills.ohanacode-dev.com",
-    MAIL_SERVER="mail.ohanacode-dev.com",
+    SECRET_KEY="SomeRandomKey",
+    MAIL_SERVER="Your.SMTP.server.here",
     MAIL_PORT=26,
     MAIL_USE_TLS=False,
     MAIL_USE_SSL=False,
-    MAIL_USERNAME="rada.berar@ohanacode-dev.com",
-    MAIL_PASSWORD="prokletamasina13",
-    MAIL_DEFAULT_SENDER="rada.berar@ohanacode-dev.com"
+    MAIL_USERNAME="Your@Email.here",
+    MAIL_PASSWORD="YourPasswordHere",
+    MAIL_DEFAULT_SENDER="Your@Email.here"
 )
 
 mail = Mail(app)
