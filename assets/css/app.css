@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+  margin-bottom: 1em;
+}
+
+.main-controls {
+  padding: 0.5rem 0 0 0;
+  margin-bottom: 0;
+}
+
+canvas {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  font-size: 1em;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  padding: 1em;
+  width: 80%;
+  background: green;
+  margin: 10px auto;
+}
+
+button:hover, button:focus {
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+}
+
+
+/* Adjustments for wider screens */
+@media all and (min-width: 800px) {
+  /* Don't take all the space as readability is lost when line length
+     goes past a certain size */
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+#ui-msg{
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: Blue;
+    padding-bottom: 1em;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: grey;
+  margin-top: 0;
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  background-color: black;
+  transition: width 1s;
+}
+
+footer{
+    background-color: #1c1c1c;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #ffa500;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a, footer p{
+    color: #ffa500;
+    display: inline:
+    float: left;
+    margin: 0 1em;
+}

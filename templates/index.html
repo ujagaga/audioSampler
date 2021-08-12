@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Diktafon</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header>
+        <h1>Snimanje uzoraka za prepoznavanje glasa</h1>
+      </header>
+
+      <section id="intro">
+        <p>
+          Ova stranica je namenjena prikupljanju glasovnih uzoraka u svrhu treniranja
+          softvera za prevođenje glasa na Srpskom jeziku u tekst.<br><br>
+          U ovom prozoru će se ispisivati brojevi od 0 do 9 koje treba da izgovorite.
+          Ukupno trajanje snimanja je kraće od 2 minuta. Nakon završenog snimanja,
+          imaćete mogućnost da upišete svoje ime i pošaljete snimak.<br><br>
+          Ako ste spremni da učestvujete, samo kliknite na dugme za start.
+        </p>
+      </section>
+
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+      </section>
+
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+
+      <button id="startstop">Start</button>
+
+      <section id="ui-msg">
+        <p></p>
+      </section>
+
+    </div>
+
+    <footer>
+      <p>Author: Rada Berar</p>
+      <p><a href="mailto:ujagaga@gmail.com">ujagaga@gmail.com</a></p>
+    </footer>
+
+    <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
+
+  </body>
+</html>
