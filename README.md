@@ -6,7 +6,7 @@ The best open source solution I found is VOSK:
 
     https://github.com/alphacep/vosk-api
 
-but it does not support Serbian language, so I have to train it. For this I need a pool of audio recordings of more than 10 people, so I wrote a Flask website deployed on Heroky that simplifies for people to record their voice and send it to me via email. 
+but it does not support Serbian language, so I have to train it. For this I need a pool of audio recordings of more than 10 people. I wrote a Flask website deployed on [Heroky](https://audiosampler.herokuapp.com/) that simplifies for people to record their voice and send it to me via email. Unfortunatelly, this does not yet work on Android, only on desktops.
 
 ### How to start? ###
 
