@@ -19,12 +19,14 @@ After this just run:
     python sampler.py
 
 
+## Using the app for another language  ##
+
+The "language" folder contains files for specific languages. To add your own language, copy english.json and rename it to your preferance. Then alter the content to contain your own language,
+In the sampler.py you will find a variable called "LOCALE". Change it to the name you gave your language file. Also take a look at other configuration variables, like email, name,...
+
 ## Contact ##
 
 * [Rada Berar](ujagaga@gmail.com)
 
-
-
-
-
+Feel free to use as you wish. I would appreciate if you create a pull request or at least send me the language file you write yourself, so I can add it to this repo.
 
