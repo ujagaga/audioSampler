@@ -5,6 +5,7 @@ const canvas = document.querySelector('.visualizer');
 const mainSection = document.querySelector('.main-controls');
 const msgWindow = document.querySelector('#ui-msg');
 var progressBar = document.querySelector('#myBar');
+var busy = new busy_indicator(document.getElementById("busybox"),  document.querySelector("#busybox div"));
 const promptMsg = [0, 9, 2, 1, 4, 3, 7, 7, 4, 2, 1, 1, 5, 5, 4, 8, 6, 7, 9, 2, 3, 6, 8, 8, 5, 6, 9, 0, 0, 3];
 var promptTimer;
 var mediaRecorder;
@@ -20,6 +21,8 @@ var i = 0;
 var j = 0;
 
 function send_data(){
+    busy.show();
+
     var form = new FormData();
     form.append('file', sample, userName);
     //Chrome inspector shows that the post data includes a file and a title.
@@ -31,6 +34,7 @@ function send_data(){
       processData: false,
       contentType: false,
     }).done(function(data) {
+          busy.hide();
           alert(data);
     });
 }

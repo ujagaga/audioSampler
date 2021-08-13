@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width">
     <title>{{lang["app_title"]}}</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/busy_indicator.css')}}">
   </head>
   <body>
+    <div id="busybox" class="fog_div">
+        <div></div>
+    </div>
     <div class="wrapper">
 
       <header>
@@ -41,7 +45,7 @@
     </footer>
 
     <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/busy_indicator.js')}}"></script>
     <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
-
   </body>
 </html>
