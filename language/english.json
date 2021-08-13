@@ -6,8 +6,6 @@
  "app_title": "Web Recorder",
  "page_title": "Voice Sample Recorder",
  "intro_line_1": "This page is intended for gathering voice samples for training an offline speech to text software in English",
- "intro_line_2": "Numbers from 0 to 9 will be displayed here for you to pronounce.Total process takes less than 2 minutes. When it is finished,
-You will be given an opportunity to specify your name and send the recording.",
- "intro_line_3": "If you are ready to participate,
- press the start button."
+ "intro_line_2": "Numbers from 0 to 9 will be displayed here for you to pronounce.Total process takes less than 2 minutes. When it is finished, You will be given an opportunity to specify your name and send the recording.",
+ "intro_line_3": "If you are ready to participate, press the start button."
 }

@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 
 from flask import Flask, render_template, send_from_directory, make_response, request
-import os
 from flask_mail import Mail, Message
 import json
 import os
+from flask_sslify import SSLify
 
-SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
+# Change this to False to switch to production mode and force https
+ALLOW_HTTP = True
 
 app = Flask(__name__, static_url_path='/assets', static_folder='assets')
 
 app.config.update(
     TESTING=False,
-    SECRET_KEY="SomeRandomKey",
+    SECRET_KEY="SomeRandomKey123",
     MAIL_SERVER="Your.SMTP.server.here",
     MAIL_PORT=26,
     MAIL_USE_TLS=False,
@@ -27,6 +28,9 @@ mail = Mail(app)
 
 LOCALE = 'english'
 LANGUAGE = {}
+
+# When testing locally comment this out as it will force https which will fail on localhost
+sslify = SSLify(app)
 
 
 def load_language():
@@ -55,11 +59,13 @@ def load_language():
 
 @app.route('/', methods=['GET'])
 def home():
+    load_language()
     return render_template('index.html', lang=LANGUAGE, admin_email=ADMIN_EMAIL, admin_name=ADMIN_NAME)
 
 
 @app.route('/collect', methods=['POST'])
 def send_sample():
+    load_language()
     file = request.files['file']
     error = None
     if file:
@@ -94,11 +100,11 @@ def send_sample():
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(SCRIPT_PATH, 'assets/favicon.ico', mimetype='image/vnd.microsoft.icon')
+    script_path = os.path.dirname(os.path.realpath(__file__))
+    return send_from_directory(script_path, 'assets/favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 if __name__ == '__main__':
-    load_language()
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=ALLOW_HTTP)
 

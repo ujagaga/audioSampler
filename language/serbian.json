@@ -6,8 +6,6 @@
  "app_title": "Diktafon",
  "page_title": "Snimanje uzoraka za prepoznavanje glasa",
  "intro_line_1": "Ova stranica je namenjena prikupljanju glasovnih uzoraka u svrhu treniranja softvera za prevo\u0111enje glasa na Srpskom jeziku u tekst.",
- "intro_line_2": "U ovom prozoru \u0107e se ispisivati brojevi od 0 do 9 koje treba da izgovorite. Ukupno trajanje snimanja je kra\u0107e od 2 minuta. Nakon zavr\u0161enog snimanja,
- ima\u0107ete mogu\u0107nost da upi\u0161ete svoje ime i po\u0161aljete snimak.",
- "intro_line_3": "Ako ste spremni da u\u010destvujete,
- samo kliknite na dugme za start."
+ "intro_line_2": "U ovom prozoru \u0107e se ispisivati brojevi od 0 do 9 koje treba da izgovorite. Ukupno trajanje snimanja je kra\u0107e od 2 minuta. Nakon zavr\u0161enog snimanja, ima\u0107ete mogu\u0107nost da upi\u0161ete svoje ime i po\u0161aljete snimak.",
+ "intro_line_3": "Ako ste spremni da u\u010destvujete, samo kliknite na dugme za start."
 }
